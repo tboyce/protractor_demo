@@ -4,7 +4,8 @@
   "description": "",
   "main": "protractor.conf.js",
   "scripts": {
-    "test": "protractor protractor.conf.js"
+    "test": "gulp test",
+    "postinstall": "webdriver-manager update"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,9 @@
   "devDependencies": {
     "chai": "^3.1.0",
     "chai-as-promised": "^5.1.0",
+    "cucumber": "^0.5.2",
+    "gulp": "^3.9.0",
+    "gulp-protractor": "^1.0.0",
     "protractor": "^2.1.0"
   }
 }
