@@ -22,6 +22,7 @@
     "cucumber": "^0.5.2",
     "gulp": "^3.9.0",
     "gulp-protractor": "^1.0.0",
-    "protractor": "^2.1.0"
+    "protractor": "^2.1.0",
+    "tsd": "^0.6.3"
   }
 }
