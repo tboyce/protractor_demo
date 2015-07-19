@@ -3,7 +3,7 @@
 declare var require;
 declare var module;
 
-import Calculator = require('PageObjects/Calculator');
+import Calculator = require('./PageObjects/Calculator');
 
 //noinspection JSUnusedAssignment
 module.exports = function () {
