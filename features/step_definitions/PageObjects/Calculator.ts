@@ -1,25 +1,25 @@
 /// <reference path="../../../.tmp/typings/tsd.d.ts" />
 
 class Calculator {
-  private browser = browser;
+  firstNumber: protractor.ElementFinder = element(by.model('first'));
+  secondNumber: protractor.ElementFinder = element(by.model('second'));
+  goButton: protractor.ElementFinder = element(by.id('gobutton'));
+  latestResult: protractor.ElementFinder = element(by.binding('latest'));
+  history: protractor.ElementArrayFinder = element.all(by.repeater('result in memory'));
 
-  firstNumber = element(by.model('first'));
-  secondNumber = element(by.model('second'));
-  goButton = element(by.id('gobutton'));
-  latestResult = element(by.binding('latest'));
-  history = element.all(by.repeater('result in memory'));
+  private browser: protractor.IBrowser = browser;
 
-  title() {
+  title(): webdriver.promise.Promise<string> {
     return this.browser.getTitle();
   }
 
-  add(a, b) {
+  add(a: string, b: string): webdriver.promise.Promise<void> {
     this.firstNumber.sendKeys(a);
     this.secondNumber.sendKeys(b);
     return this.goButton.click();
   }
 
-  load() {
+  load(): webdriver.promise.Promise<void> {
     return this.browser.get('http://juliemr.github.io/protractor-demo');
   }
 }
