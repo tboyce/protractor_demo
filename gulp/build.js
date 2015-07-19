@@ -13,7 +13,7 @@ var tsProject = $.typescript.createProject({
   module: 'commonjs'
 });
 
-gulp.task('build', ['tsd:install'], function () {
+gulp.task('compile', function () {
   return gulp.src(path.join(conf.paths.e2e, '/**/*.ts'))
     .pipe($.sourcemaps.init())
     .pipe($.tslint())
@@ -22,6 +22,8 @@ gulp.task('build', ['tsd:install'], function () {
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest(conf.paths.tmp))
 });
+
+gulp.task('build', ['tsd:install', 'compile']);
 
 gulp.task('clean', ['tsd:purge'], function (done) {
   $.del([path.join(conf.paths.tmp, '/')], done);
