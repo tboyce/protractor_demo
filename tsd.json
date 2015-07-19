@@ -2,20 +2,6 @@
   "version": "v4",
   "repo": "borisyankov/DefinitelyTyped",
   "ref": "master",
-  "path": "typings",
-  "bundle": "typings/tsd.d.ts",
-  "installed": {
-    "angular-protractor/angular-protractor.d.ts": {
-      "commit": "db475daba23206e8cd0ac04d47f0764f4a62f7da"
-    },
-    "selenium-webdriver/selenium-webdriver.d.ts": {
-      "commit": "db475daba23206e8cd0ac04d47f0764f4a62f7da"
-    },
-    "chai/chai.d.ts": {
-      "commit": "db475daba23206e8cd0ac04d47f0764f4a62f7da"
-    },
-    "chai-as-promised/chai-as-promised.d.ts": {
-      "commit": "db475daba23206e8cd0ac04d47f0764f4a62f7da"
-    }
-  }
+  "path": ".tmp/typings",
+  "bundle": ".tmp/typings/tsd.d.ts"
 }

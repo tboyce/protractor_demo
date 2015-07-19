@@ -1,4 +1,4 @@
-/// <reference path="../../typings/tsd.d.ts" />
+/// <reference path="../../.tmp/typings/tsd.d.ts" />
 var PageObjects;
 (function (PageObjects) {
     var Calculator = (function () {

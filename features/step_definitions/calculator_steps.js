@@ -1,5 +1,5 @@
 /// <reference path="./calculator_po.ts" />
-/// <reference path="../../typings/tsd.d.ts" />
+/// <reference path="../../.tmp/typings/tsd.d.ts" />
 //noinspection JSUnusedAssignment
 module.exports = function () {
     var chai = require('chai');
