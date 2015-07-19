@@ -1,9 +1,11 @@
-/// <reference path="../../typings/angular-protractor/angular-protractor.d.ts" />
+/// <reference path="../../typings/tsd.d.ts" />
 
 declare var module;
 
 module PageObjects {
     export class Calculator {
+        private browser = browser;
+
         firstNumber = element(by.model('first'));
         secondNumber = element(by.model('second'));
         goButton = element(by.id('gobutton'));
@@ -11,7 +13,7 @@ module PageObjects {
         history = element.all(by.repeater('result in memory'));
 
         title() {
-            return browser.getTitle();
+            return this.browser.getTitle();
         }
 
         add(a, b) {
@@ -21,9 +23,10 @@ module PageObjects {
         }
 
         load() {
-            return browser.get('http://juliemr.github.io/protractor-demo');
+            return this.browser.get('http://juliemr.github.io/protractor-demo');
         }
     }
 }
 
+//noinspection JSUnusedAssignment
 module.exports = new PageObjects.Calculator();

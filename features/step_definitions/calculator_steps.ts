@@ -1,10 +1,10 @@
 /// <reference path="./calculator_po.ts" />
-/// <reference path="../../typings/chai/chai.d.ts" />
-/// <reference path="../../typings/chai-as-promised/chai-as-promised.d.ts" />
+/// <reference path="../../typings/tsd.d.ts" />
 
 declare var require;
 declare var module;
 
+//noinspection JSUnusedAssignment
 module.exports = function () {
     var chai : Chai.ChaiStatic = require('chai');
     var chaiAsPromised = require('chai-as-promised');

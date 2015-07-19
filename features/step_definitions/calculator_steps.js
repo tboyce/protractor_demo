@@ -1,6 +1,6 @@
 /// <reference path="./calculator_po.ts" />
-/// <reference path="../../typings/chai/chai.d.ts" />
-/// <reference path="../../typings/chai-as-promised/chai-as-promised.d.ts" />
+/// <reference path="../../typings/tsd.d.ts" />
+//noinspection JSUnusedAssignment
 module.exports = function () {
     var chai = require('chai');
     var chaiAsPromised = require('chai-as-promised');
