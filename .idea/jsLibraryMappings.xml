@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$USER_HOME$/protractor_demo" libraries="{angular node_modules}" />
+    <file url="file://$USER_HOME$/protractor_demo/protractor.conf.js" libraries="{Node.js Globals}" />
+    <file url="PROJECT" libraries="{angular-protractor-DefinitelyTyped, chai-DefinitelyTyped, chai-as-promised-DefinitelyTyped, jasmine-DefinitelyTyped, karma-jasmine-DefinitelyTyped, selenium-webdriver-DefinitelyTyped}" />
+  </component>
+</project>
