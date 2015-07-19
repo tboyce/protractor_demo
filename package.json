@@ -4,8 +4,7 @@
   "description": "",
   "main": "protractor.conf.js",
   "scripts": {
-    "test": "gulp test",
-    "postinstall": "webdriver-manager update"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",

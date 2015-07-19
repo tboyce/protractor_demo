@@ -1,9 +1,13 @@
 var gulp = require("gulp");
-var protractor = require("gulp-protractor").protractor;
+var protractor = require("gulp-protractor");
 
-gulp.task('test', function () {
+gulp.task('update-webdriver', function(cb) {
+    protractor.webdriver_update({browsers: ['chrome']}, cb);
+});
+
+gulp.task('test', ['update-webdriver'], function () {
     gulp.src(["features/*.feature"])
-        .pipe(protractor({
+        .pipe(protractor.protractor({
             configFile: "protractor.conf.js"
         }));
 });
