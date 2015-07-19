@@ -8,7 +8,7 @@ exports.config = {
     browserName: 'chrome'
   }],
   cucumberOpts: {
-    require: 'features/step_definitions/*_steps.js',
+    require: '.tmp/step_definitions/*_steps.js',
     format: 'pretty'
   }
 };

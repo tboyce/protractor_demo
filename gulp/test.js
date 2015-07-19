@@ -27,4 +27,5 @@ function runProtractor (done) {
     });
 }
 
-gulp.task('protractor', ['webdriver-update'], runProtractor);
+gulp.task('protractor', ['webdriver-update', 'build'], runProtractor);
+gulp.task('test', ['protractor']);

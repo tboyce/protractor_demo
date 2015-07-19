@@ -20,12 +20,17 @@
     "chai": "^3.1.0",
     "chai-as-promised": "^5.1.0",
     "cucumber": "^0.5.2",
+    "del": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-load-plugins": "^0.10.0",
     "gulp-protractor": "^1.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-tslint": "^2.0.0",
+    "gulp-typescript": "^2.7.8",
     "gulp-util": "^3.0.6",
     "protractor": "^2.1.0",
     "tsd": "^0.6.3",
     "wrench": "^1.5.8"
-  }
+  },
+  "dependencies": {}
 }
