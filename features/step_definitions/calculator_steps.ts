@@ -1,8 +1,9 @@
-/// <reference path="./calculator_po.ts" />
 /// <reference path="../../.tmp/typings/tsd.d.ts" />
 
 declare var require;
 declare var module;
+
+import Calculator = require('PageObjects/Calculator');
 
 //noinspection JSUnusedAssignment
 module.exports = function () {
@@ -11,7 +12,7 @@ module.exports = function () {
   chai.use(chaiAsPromised);
   var expect = chai.expect;
 
-  var calc:PageObjects.Calculator = require('./calculator_po.js');
+  var calc = new Calculator();
 
   this.Then(/^the app should be titled "([^"]*)"$/, function (expected, next) {
     expect(calc.title()).to.eventually.equal(expected).and.notify(next);
