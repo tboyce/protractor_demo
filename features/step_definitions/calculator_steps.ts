@@ -5,8 +5,7 @@ declare var module;
 
 import Calculator = require('./PageObjects/Calculator');
 
-//noinspection JSUnusedAssignment
-module.exports = function () {
+var myStepDefinitionsWrapper = function () {
   var chai:Chai.ChaiStatic = require('chai');
   var chaiAsPromised = require('chai-as-promised');
   chai.use(chaiAsPromised);
@@ -34,3 +33,6 @@ module.exports = function () {
     expect(calc.history[pos]().getText()).to.eventually.contain(expected).and.notify(next);
   });
 };
+
+//noinspection JSUnusedAssignment
+module.exports = myStepDefinitionsWrapper;
