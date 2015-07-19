@@ -1,4 +1,4 @@
-https://travis-ci.org/tboyce/protractor_demo.svg?branch=master
+![Build Status](https://travis-ci.org/tboyce/protractor_demo.svg?branch=master)
 
 ## Setup ##
 ```
