@@ -23,7 +23,9 @@ gulp.task('compile', function () {
     .pipe(gulp.dest(conf.paths.tmp))
 });
 
-gulp.task('build', ['tsd:install', 'compile']);
+gulp.task('build', ['tsd:install'], function() {
+  gulp.run(['compile']);
+});
 
 gulp.task('clean', ['tsd:purge'], function (done) {
   $.del([path.join(conf.paths.tmp, '/')], done);
