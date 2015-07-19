@@ -1,3 +1,5 @@
+https://travis-ci.org/tboyce/protractor_demo.svg?branch=master
+
 ## Setup ##
 ```
 npm install -g gulp
