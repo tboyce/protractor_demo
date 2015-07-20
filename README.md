@@ -13,6 +13,7 @@ Build one time with `gulp build`
 Watch for changes and rebuild with `gulp watch`
 
 ## Running the tests ##
+To run the tests you must have Java installed and available in your path.
 ```
 gulp test
 ```
