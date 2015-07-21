@@ -5,7 +5,7 @@ var gulp = require('gulp');
 var conf = require('./conf');
 
 var $ = require('gulp-load-plugins')({
-  pattern: ['gulp-*', 'del']
+  pattern: ['gulp-*', 'del', 'run-sequence']
 });
 
 var tsProject = $.typescript.createProject({
@@ -23,8 +23,8 @@ gulp.task('compile', function () {
     .pipe(gulp.dest(conf.paths.tmp))
 });
 
-gulp.task('build', ['tsd:install'], function() {
-  gulp.run(['compile']);
+gulp.task('build', function() {
+  $.runSequence('clean', 'tsd:install', 'compile');
 });
 
 gulp.task('clean', ['tsd:purge'], function (done) {
