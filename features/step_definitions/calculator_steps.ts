@@ -15,12 +15,12 @@ var myStepDefinitionsWrapper: Function = function (): void {
     expect(Calculator.title()).to.eventually.equal(expected).and.notify(next);
   });
 
-  this.When(/^I load the calculator$/, function (next: Function): void {
-    expect(Calculator.load()).to.notify(next);
+  this.When(/^I load the calculator$/, function (next: Cucumber.ICallback): void {
+    Calculator.load().then(next);
   });
 
   this.When(/^I add (\d+) and (\d+)$/, function (first: string, second: string, next: Cucumber.ICallback): void {
-    expect(calc.add(first, second)).to.notify(next);
+    calc.add(first, second).then(next);
   });
 
   this.Then(/^the result should be (\d+)$/, function (expected: string, next: Cucumber.ICallback): void {

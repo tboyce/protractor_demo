@@ -1,9 +1,12 @@
 declare module Cucumber {
 
   export interface ICallback {
-    (failureReason?: string): void;
-    pending(failureReason?: string): void;
-    fail(failureReason?: string): void;
+    (): void;
+    (failureReason: string): void;
+    pending(): void;
+    pending(failureReason: string): void;
+    fail(): void;
+    fail(failureReason: string): void;
   }
 
   export function Given(title: RegExp, fn: Function): void;
