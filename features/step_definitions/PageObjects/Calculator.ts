@@ -5,10 +5,12 @@ class Calculator {
   latestResult: protractor.ElementFinder = element(by.binding('latest'));
   history: protractor.ElementArrayFinder = element.all(by.repeater('result in memory'));
 
-  private browser: protractor.IBrowser = browser;
+  static load(): webdriver.promise.Promise<void> {
+    return browser.get('http://juliemr.github.io/protractor-demo');
+  }
 
-  title(): webdriver.promise.Promise<string> {
-    return this.browser.getTitle();
+  static title(): webdriver.promise.Promise<string> {
+    return browser.getTitle();
   }
 
   add(a: string, b: string): webdriver.promise.Promise<void> {
@@ -17,9 +19,6 @@ class Calculator {
     return this.goButton.click();
   }
 
-  load(): webdriver.promise.Promise<void> {
-    return this.browser.get('http://juliemr.github.io/protractor-demo');
-  }
 }
 
 export = Calculator
