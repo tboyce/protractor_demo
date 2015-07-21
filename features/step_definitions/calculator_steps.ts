@@ -13,7 +13,7 @@ var myStepDefinitionsWrapper: Function = function (): void {
 
   var calc: Calculator = new Calculator();
 
-  this.Then(/^the app should be titled "([^"]*)"$/, function (expected: string, next: Function): void {
+  this.Then(/^the app should be titled "([^"]*)"$/, function (expected: string, next: Cucumber.ICallback): void {
     expect(calc.title()).to.eventually.equal(expected).and.notify(next);
   });
 
@@ -21,17 +21,18 @@ var myStepDefinitionsWrapper: Function = function (): void {
     expect(calc.load()).to.notify(next);
   });
 
-  this.When(/^I add (\d+) and (\d+)$/, function (first: string, second: string, next: Function): void {
+  this.When(/^I add (\d+) and (\d+)$/, function (first: string, second: string, next: Cucumber.ICallback): void {
     expect(calc.add(first, second)).to.notify(next);
   });
 
-  this.Then(/^the result should be (\d+)$/, function (expected: string, next: Function): void {
+  this.Then(/^the result should be (\d+)$/, function (expected: string, next: Cucumber.ICallback): void {
     expect(calc.latestResult.getText()).to.eventually.equal(expected).and.notify(next);
   });
 
-  this.Then(/^the (first|last) history entry should be "([^"]*)"$/, function (pos: string, expected: string, next: Function): void {
-    expect(calc.history[pos]().getText()).to.eventually.contain(expected).and.notify(next);
-  });
+  this.Then(/^the (first|last) history entry should be "([^"]*)"$/,
+    function (pos: string, expected: string, next: Cucumber.ICallback): void {
+      expect(calc.history[pos]().getText()).to.eventually.contain(expected).and.notify(next);
+    });
 };
 
 // noinspection JSUnusedAssignment
