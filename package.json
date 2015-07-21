@@ -4,7 +4,7 @@
   "description": "",
   "main": "protractor.conf.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp build"
   },
   "repository": {
     "type": "git",
