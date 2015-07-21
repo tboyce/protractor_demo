@@ -1,15 +1,18 @@
 declare module Cucumber {
-  interface ICallback {
+
+  export interface ICallback {
     (failureReason?: string): void;
     pending(failureReason?: string): void;
     fail(failureReason?: string): void;
   }
 
-  interface ISteps {
-    Given(title: RegExp, fn: Function): void;
-    When(title: RegExp, fn: Function): void;
-    Then(title: RegExp, fn: Function): void;
-    And(title: RegExp, fn: Function): void;
-    But(title: RegExp, fn: Function): void;
-  }
+  export function Given(title: RegExp, fn: Function): void;
+
+  export function When(title: RegExp, fn: Function): void;
+
+  export function Then(title: RegExp, fn: Function): void;
+
+  export function And(title: RegExp, fn: Function): void;
+
+  export function But(title: RegExp, fn: Function): void;
 }
