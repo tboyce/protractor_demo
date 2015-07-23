@@ -1,3 +1,5 @@
+/// <reference path="../../../.tmp/typings/angular-protractor/angular-protractor.d.ts" />
+
 class Calculator {
   firstNumber: protractor.ElementFinder = element(by.model('first'));
   secondNumber: protractor.ElementFinder = element(by.model('second'));
