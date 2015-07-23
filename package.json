@@ -31,6 +31,7 @@
     "gulp-typescript": "^2.7.8",
     "gulp-util": "^3.0.6",
     "protractor": "^2.1.0",
+    "run-sequence": "^1.1.2",
     "tsd": "^0.6.3",
     "wrench": "^1.5.8"
   },
