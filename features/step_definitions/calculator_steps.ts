@@ -1,5 +1,5 @@
 /// <reference path="../../.tmp/typings/tsd.d.ts" />
-/// <reference path="./cucumber.d.ts" />
+/// <reference path="./Support/cucumber.d.ts" />
 
 import Calculator = require('./PageObjects/Calculator');
 import chai = require('chai');
