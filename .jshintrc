@@ -1,0 +1,29 @@
+{
+  "bitwise"         : true,
+  "curly"           : true,
+  "eqeqeq"          : true,
+  "forin"           : true,
+  "freeze"          : true,
+  "funcscope"       : true,
+  "futurehostile"   : true,
+  "iterator"        : true,
+  "latedef"         : true,
+  "maxcomplexity"   : 10,
+  "maxdepth"        : 5,
+  "maxparams"       : 5,
+  "maxstatements"   : 5,
+  "noarg"           : true,
+  "nocomma"         : true,
+  "nonbsp"          : true,
+  "nonew"           : true,
+  "notypeof"        : true,
+  "shadow"          : true,
+  "singleGroups"    : true,
+  "strict"          : true,
+  "undef"           : true,
+  "unused"          : true,
+  "varstmt"         : false,
+
+
+  "node"            : true
+}

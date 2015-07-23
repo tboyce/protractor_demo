@@ -13,17 +13,28 @@ var tsProject = $.typescript.createProject({
   module: 'commonjs'
 });
 
-gulp.task('compile', function () {
+gulp.task('compile', ['inspect:js', 'inspect:ts'], function () {
   return gulp.src(path.join(conf.paths.e2e, '/**/*.ts'))
     .pipe($.sourcemaps.init())
-    .pipe($.tslint())
-    .pipe($.tslint.report('prose', { emitError: false }))
     .pipe($.typescript(tsProject)).on('error', conf.errorHandler('TypeScript'))
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest(conf.paths.tmp))
+    .pipe(gulp.dest(conf.paths.tmp));
 });
 
-gulp.task('build', ['tsd:install'], function() {
+gulp.task('inspect:ts', function() {
+  return gulp.src(path.join(conf.paths.e2e, '/**/*.ts'))
+    .pipe($.tslint())
+    .pipe($.tslint.report('prose', {emitError: false}));
+});
+
+gulp.task('inspect:js', function() {
+  return gulp.src(path.join(conf.paths.gulp, '/**/*.js'))
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('default'))
+    .pipe($.jscs());
+});
+
+gulp.task('build', ['tsd:install'], function () {
   gulp.run(['compile']);
 });
 
